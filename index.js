@@ -1,4 +1,4 @@
-let input = '';
+let output = '';
 let dataList=[];
 
 
@@ -12,33 +12,33 @@ function selectedData(data) {
 
  if(i % 5 === 0 ||i % 3 === 0 || i % 2 === 0){
     if(i %2 === 0){
-        if(input != '')
-        input+='-yu' 
+        if(output != '')
+        output+='-yu' 
         else{
-            input ='yu' 
+            output ='yu' 
         }
     }
      if(i % 3 === 0){
-            if(input !='')
-            input += '-gi' 
+            if(output !='')
+            output += '-gi' 
 
             else{
-                input = 'gi' 
+                output = 'gi' 
             }
         }
         if(i % 5 === 0){
-            if(input != '')
-            input += '-oh' 
+            if(output != '')
+            output += '-oh' 
 
             else{
-                input = 'oh' 
+                output = 'oh' 
             }
         }
 }
         else{
-            input = i;
+            output = i;
         }
-        dataList.push(input);
+        dataList.push(output);
     }
     return dataList;
 }
