@@ -20,4 +20,4 @@ function checkData(max = 100) {
     return output
 };
 checkData(100);
-checkData(80);
+checkData(50);
