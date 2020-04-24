@@ -1,45 +1,23 @@
-let output = '';
-let dataList=[];
-
-
-
-function selectedData(data) {
-    
-
-    for(i = 1; i <= data; i++) {
-
-    
-
- if(i % 5 === 0 ||i % 3 === 0 || i % 2 === 0){
-    if(i %2 === 0){
-        if(output != '')
-        output+='-yu' 
-        else{
-            output ='yu' 
+function checkedData(max = 100) {
+    let range = [...Array(max).keys()].map(n => n + 1)
+    let output = [];
+    range.forEach((number) => {
+        let input = ''
+        if (number % 2 === 0) {
+            input = 'yu'
         }
-    }
-     if(i % 3 === 0){
-            if(output !='')
-            output += '-gi' 
-
-            else{
-                output = 'gi' 
-            }
+        if (number % 3 === 0) {
+            input += input ? '-gi' : 'gi'
         }
-        if(i % 5 === 0){
-            if(output != '')
-            output += '-oh' 
-
-            else{
-                output = 'oh' 
-            }
+        if (number % 5 === 0) {
+            input += input ? '-oh' : 'oh'
         }
-}
-        else{
-            output = i;
+        if (!input) {
+            input = number
         }
-        dataList.push(output);
-    }
-    return dataList;
-}
-console.log(selectedData());
+        output.push(input)
+    });
+    return output
+};
+checkedData(100);
+checkedData(80);
