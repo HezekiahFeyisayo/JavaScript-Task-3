@@ -1,4 +1,4 @@
-function checkedData(max = 100) {
+function checkData(max = 100) {
     let range = [...Array(max).keys()].map(n => n + 1)
     let output = [];
     range.forEach((number) => {
@@ -19,5 +19,5 @@ function checkedData(max = 100) {
     });
     return output
 };
-checkedData(100);
-checkedData(80);
+checkData(100);
+checkData(80);
